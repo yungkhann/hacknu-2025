@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config = {
+  mode: "jit",
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -24,6 +25,7 @@ const config = {
         "primary-purple": "var(--primary-purple)",
         "primary-grey": "var(--primary-grey)",
         "secondary-grey": "var(--secondary-grey)",
+        "navbar-color": "var(--navbar-color)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
