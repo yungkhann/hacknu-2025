@@ -198,6 +198,36 @@ const Icons = {
       </g>
     </svg>
   ),
+  smallArrowRight: (props: LucideProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="23"
+      height="37"
+      viewBox="0 0 23 37"
+      fill="none"
+      {...props}
+    >
+      <path
+        d="M16.5708 15.75H22.1958V21H16.5708V26.25H11.3208V31.5H6.0708V36.75H0.820801H0.554199V31.5H5.8042V26.25H11.0542V21H16.3042V15.75H11.0542V10.5H5.8042V5.25H0.554199V0H0.820801H6.0708V5.25H11.3208V10.5H16.5708V15.75Z"
+        fill="#58E191"
+      />
+    </svg>
+  ),
+  bottomLine: (props: LucideProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="38"
+      height="6"
+      viewBox="0 0 38 6"
+      fill="none"
+      {...props}
+    >
+      <path
+        d="M0.695801 5.75V0.5H37.4458V5.75H21.6958H16.4458H0.695801Z"
+        fill="#58E191"
+      />
+    </svg>
+  ),
 };
 
 export default Icons;
