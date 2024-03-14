@@ -7,7 +7,7 @@
   src: url("/fonts/hellovetica.ttf") format("truetype");
 }
 
-@font-face {
+/* @font-face {
   font-family: "NeueMachina";
   src: url("/fonts/NeueMachina/NeueMachina-Black.ttf") format("truetype"),
         url("/fonts/NeueMachina/NeueMachina-Bold.ttf") format("truetype"),
@@ -17,7 +17,56 @@
         url("/fonts/NeueMachina/NeueMachina-Ultrabold.ttf") format("truetype"), 
         url("/fonts/NeueMachina/NeueMachina-Ultralight.ttf") format("truetype");
 
+} */
+@font-face {
+  font-family: "NeueMachina";
+  src: url("/fonts/NeueMachina/NeueMachina-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "NeueMachina";
+  src: url("/fonts/NeueMachina/NeueMachina-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeueMachina";
+  src: url("/fonts/NeueMachina/NeueMachina-Ultralight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeueMachina";
+  src: url("/fonts/NeueMachina/NeueMachina-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeueMachina";
+  src: url("/fonts/NeueMachina/NeueMachina-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeueMachina";
+  src: url("/fonts/NeueMachina/NeueMachina-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeueMachina";
+  src: url("/fonts/NeueMachina/NeueMachina-Ultrabold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
 @layer base {
   :root {
     /* main colors of website */
@@ -110,4 +159,17 @@
     var(--edge-size) 100%,
     0 calc(100% - var(--edge-size))
   );
+}
+
+.outlinedHacknu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid white;
+  clip-path: inherit;
+  pointer-events: none;
+  z-index: -1;
 }

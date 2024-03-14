@@ -21,7 +21,7 @@ const Hero = () => {
               register
             </span>
           </div>
-          <div className="self-end mb-1 bg-primary-green w-[36px] h-[5.25px] animate-blink"/>
+          <div className="self-end mb-1 bg-primary-green w-[36px] h-[5.25px] animate-blink" />
         </Link>
       </div>
     </div>
