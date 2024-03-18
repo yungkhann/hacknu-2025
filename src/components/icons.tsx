@@ -198,12 +198,38 @@ const Icons = {
       </g>
     </svg>
   ),
+  bigArrowRight: (props: LucideProps) => (
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      width="44" 
+      height="74" 
+      viewBox="0 0 44 74" 
+      fill="none"
+    >
+      <path d="M32.1416 31.5H43.3916V42H32.1416V52.5H21.6416V63H11.1416V73.5H0.641602H0.108398V63H10.6084V52.5H21.1084V42H31.6084V31.5H21.1084V21H10.6084V10.5H0.108398V0H0.641602H11.1416V10.5H21.6416V21H32.1416V31.5Z" fill="#58E191"/>
+    </svg>
+  ),
   smallArrowRight: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="23"
       height="37"
       viewBox="0 0 23 37"
+      fill="none"
+      {...props}
+    >
+      <path
+        d="M16.5708 15.75H22.1958V21H16.5708V26.25H11.3208V31.5H6.0708V36.75H0.820801H0.554199V31.5H5.8042V26.25H11.0542V21H16.3042V15.75H11.0542V10.5H5.8042V5.25H0.554199V0H0.820801H6.0708V5.25H11.3208V10.5H16.5708V15.75Z"
+        fill="#58E191"
+      />
+    </svg>
+  ),
+  arrowRight: (width: string, height: string, props: LucideProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      viewBox={"0 0 " + width + " " + height}
       fill="none"
       {...props}
     >
