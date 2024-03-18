@@ -12,7 +12,7 @@ export const TimelineData: ITimelineData[] = [
   },
   {
     question: "Where?",
-    answer: "Nazarbayev University",
+    answer: "Nazarbayev University",
     map: true,
   },
   {
