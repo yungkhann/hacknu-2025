@@ -14,7 +14,9 @@ const Hero = () => {
         </p>
       </div>
       <div className="flex justify-center">
-        <Link href="/register" className="flex flex-row">
+        <Link href="/register" className="flex flex-row" style={{
+          textDecoration: "none",
+        }}>
           <div className="flex flex-row items-center gap-x-1">
             <Icons.smallArrowRight />
             <span className="font-Helloviteca text-[30px] lg:text-[42px] leading-normal text-primary-green">

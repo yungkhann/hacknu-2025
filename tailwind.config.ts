@@ -30,6 +30,7 @@ const config = {
         "primary-grey": "var(--primary-grey)",
         "secondary-grey": "var(--secondary-grey)",
         "navbar-color": "var(--navbar-color)",
+        "dashed-border": "var(--dashed-border)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

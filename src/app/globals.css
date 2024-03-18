@@ -75,7 +75,8 @@
     --primary-purple: #e256ff;
     --primary-grey: #aeaeae;
     --secondary-grey: #6a6a6a;
-    --navbar-color: rgba(25, 25, 25, 0.7);
+    --dashed-border: #434343;
+    --navbar-color: rgba(25, 25, 25, 1);
 
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -172,4 +173,8 @@
   clip-path: inherit;
   pointer-events: none;
   z-index: -1;
+}
+
+a {
+  text-decoration: underline
 }
