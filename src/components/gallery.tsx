@@ -1,29 +1,33 @@
 import Image from "next/image";
 
-const Agenda = () => {
+const Gallery = () => {
     return (
-        <div className="flex flex-col py-24 px-6">
-            <div className="flex">
-                <div className="w-1/2">
-                    <Image
-                    src="/images/hack-nu-2019.jpg"
-                    alt="Description of the image"
-                    fill={true}
-                    className="object-cover"
-                    />
-                </div>
-                <div className="w-1/2">
-                    <Image
-                    src="/images/hack-nu-2019.jpg"
-                    alt="Description of the image"
-                    width={400}
-                    height={400}
-                    className="h-full"
-                    />
-                </div>
-            </div>
+<div className="flex gap-x-4 py-6">
+      <div className="w-1/2">
+        <div className="relative" style={{ paddingTop: '100%' }}>
+          <Image
+            src="/images/hack-nu-2019.jpg"
+            alt="Your Image Alt Text"
+            layout="fill"
+            objectFit="cover"
+          />
+        <div className="absolute bottom-0 bg-black">
+        <p>HACKNU-2023</p>
         </div>
+        </div>
+      </div>
+      <div className="w-1/2">
+        <div className="relative" style={{ paddingTop: '100%' }}>
+          <Image
+            src="/images/hack-nu-2019.jpg"
+            alt="Your Image Alt Text"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+      </div>
+    </div>
     );
   };
   
-  export default Agenda;
+  export default Gallery;
