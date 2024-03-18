@@ -28,7 +28,7 @@ export interface IAgendaData {
         { time: "09:00", name: "Submissions Deadline" },
         { time: "10:00", name: "Coffee-break" },
         { time: "11:00", name: "Pitching" },
-        { time: "13:00", name: "Closign Ceremony" }
+        { time: "13:00", name: "Closing Ceremony" }
       ],
     },
   ];

@@ -1,36 +1,51 @@
-import Image from "next/image";
+'use client'
+// components/gallery.tsx
+import { useEffect, useState } from "react";
 import { IMAGES } from "@/consts/images";
 import ImageContainer from "./image-container";
 
 const Gallery = () => {
-    const first2images = IMAGES.slice(0, 2);
-    const next3images = IMAGES.slice(2, 5 );
-    const next4images = IMAGES.slice(5, 9 );
+    const [imageSets, setImageSets] = useState<{ images: { src: string; event: string }[]; width: string; }[]>([]);
+
+    useEffect(() => {
+        const handleResize = () => {
+            const screenWidth = window.innerWidth;
+            let sliceRanges = [];
+
+            if (screenWidth >= 768) {
+                sliceRanges = [[0, 2], [2, 5], [5, 9]];
+            } else {
+                sliceRanges = [[0, 1], [1, 3], [3, 5]];
+            }
+
+            const newImageSets = sliceRanges.map(([start, end]) => ({
+                images: IMAGES.slice(start, end),
+                width: end - start === 1 ? "full" : (end - start === 2 ? "1/2" : (end - start === 3 ? "1/3" : "1/4")),
+
+            }));
+            setImageSets(newImageSets);
+        };
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     return (
         <div className="flex flex-col gap-y-3 pb-24">
-            <div className="flex flex-row gap-x-3">
-                {first2images.map((image, image_index) => (
-                <div key={image_index} className="w-1/2">
-                    <ImageContainer index={image_index} image={image} event="HackNU/23"/>
-            </div>
-        ))} 
+            {imageSets.map((imageSet, setIndex) => (
+                <div key={setIndex} className="flex flex-row gap-x-3">
+                    {imageSet.images.map((image, imageIndex) => (
+                        <div key={imageIndex} className={`w-${imageSet.width}`}>
+                            <ImageContainer index={setIndex * 3 + imageIndex} image={image.src} event={image.event} />
+                        </div>
+                    ))}
+                </div>
+            ))}
         </div>
-        <div className="flex flex-row gap-x-3">
-                {next3images.map((image, image_index) => (
-                <div key={image_index} className="w-1/3">
-                    <ImageContainer index={image_index} image={image} event="HackNU/19" />
-            </div>
-        ))} 
-        </div>
-        <div className="flex flex-row gap-x-3">
-                {next4images.map((image, image_index) => (
-                <div key={image_index} className="w-1/4">
-                    <ImageContainer index={image_index} image={image} event="HackNU/23"/>
-            </div>
-        ))} 
-        </div>
-    </div>
     );
-  };
-  
-  export default Gallery;
+};
+
+export default Gallery;
