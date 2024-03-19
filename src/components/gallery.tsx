@@ -1,5 +1,4 @@
 'use client'
-// components/gallery.tsx
 import { useEffect, useState } from "react";
 import { IMAGES } from "@/consts/images";
 import ImageContainer from "./image-container";
@@ -20,7 +19,7 @@ const Gallery = () => {
 
             const newImageSets = sliceRanges.map(([start, end]) => ({
                 images: IMAGES.slice(start, end),
-                width: end - start === 1 ? "full" : (end - start === 2 ? "1/2" : (end - start === 3 ? "1/3" : "1/4")),
+                width: end - start === 1 ? "1" : (end - start === 2 ? "1/2" : (end - start === 3 ? "1/3" : "1/4")),
 
             }));
             setImageSets(newImageSets);
@@ -38,7 +37,7 @@ const Gallery = () => {
             {imageSets.map((imageSet, setIndex) => (
                 <div key={setIndex} className="flex flex-row gap-x-3">
                     {imageSet.images.map((image, imageIndex) => (
-                        <div key={imageIndex} className={`w-${imageSet.width}`}>
+                        <div key={imageIndex} style={{ width: `calc(${imageSet.width} * 100%)` }}>
                             <ImageContainer index={setIndex * 3 + imageIndex} image={image.src} event={image.event} />
                         </div>
                     ))}

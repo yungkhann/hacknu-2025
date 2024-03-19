@@ -18,7 +18,6 @@ export interface IAgendaData {
         { time: "13:00", name: "Q&A with Judges" },
         { time: "14:00", name: "Coffee-break" },
         { time: "18:00", name: "Games" },
-        { time: "20:00", name: "Pizza Break" }
       ],
     },
     {

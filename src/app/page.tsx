@@ -8,6 +8,7 @@ import {
   FAQ,
   Register,
   KeyThings,
+  About,
 } from "@/components";
 import Image from "next/image";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <Timeline />
       <KeyThings />
+      <About />
       <Agenda />
       <Gallery />
       <FAQ />
