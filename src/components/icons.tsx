@@ -199,14 +199,17 @@ const Icons = {
     </svg>
   ),
   bigArrowRight: (props: LucideProps) => (
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      width="44" 
-      height="74" 
-      viewBox="0 0 44 74" 
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="44"
+      height="74"
+      viewBox="0 0 44 74"
       fill="none"
     >
-      <path d="M32.1416 31.5H43.3916V42H32.1416V52.5H21.6416V63H11.1416V73.5H0.641602H0.108398V63H10.6084V52.5H21.1084V42H31.6084V31.5H21.1084V21H10.6084V10.5H0.108398V0H0.641602H11.1416V10.5H21.6416V21H32.1416V31.5Z" fill="#58E191"/>
+      <path
+        d="M32.1416 31.5H43.3916V42H32.1416V52.5H21.6416V63H11.1416V73.5H0.641602H0.108398V63H10.6084V52.5H21.1084V42H31.6084V31.5H21.1084V21H10.6084V10.5H0.108398V0H0.641602H11.1416V10.5H21.6416V21H32.1416V31.5Z"
+        fill="#58E191"
+      />
     </svg>
   ),
   smallArrowRight: (props: LucideProps) => (
@@ -263,7 +266,28 @@ const Icons = {
       fill="none"
       {...props}
     >
-      <path d="M0 1.5H661" stroke="#434343" strokeWidth="2" strokeDasharray="10 3" />
+      <path
+        d="M0 1.5H661"
+        stroke="#434343"
+        strokeWidth="2"
+        strokeDasharray="10 3"
+      />
+    </svg>
+  ),
+  seperatorLong: (props: LucideProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="3"
+      viewBox="0 0 1124 3"
+      fill="none"
+      {...props}
+    >
+      <path
+        d="M0 1.5H1124"
+        stroke="#757575"
+        stroke-width="2"
+        stroke-dasharray="12 3"
+      />
     </svg>
   ),
 };

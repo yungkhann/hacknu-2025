@@ -1,4 +1,14 @@
-import { Header, Icons, Hero, Timeline, Agenda, Gallery, FAQ, Register } from "@/components";
+import {
+  Header,
+  Icons,
+  Hero,
+  Timeline,
+  Agenda,
+  Gallery,
+  FAQ,
+  Register,
+  KeyThings,
+} from "@/components";
 import Image from "next/image";
 
 export default function Home() {
@@ -6,6 +16,7 @@ export default function Home() {
     <div className="px-6 w-full h-full">
       <Hero />
       <Timeline />
+      <KeyThings />
       <Agenda />
       <Gallery />
       <FAQ />
