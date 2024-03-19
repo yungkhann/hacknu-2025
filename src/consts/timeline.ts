@@ -1,8 +1,8 @@
 export interface ITimelineData {
-    question: string;
-    answer: string; 
-    map?: boolean;
-    link?: string;
+  question: string;
+  answer: string;
+  map?: boolean;
+  link?: string;
 }
 
 export const TimelineData: ITimelineData[] = [
@@ -14,6 +14,7 @@ export const TimelineData: ITimelineData[] = [
     question: "Where?",
     answer: "Nazarbayev University",
     map: true,
+    link: "https://2gis.kz/astana/firm/70000001018129704",
   },
   {
     question: "How?",

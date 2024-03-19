@@ -12,7 +12,7 @@ const buttonVariants = cva(
         hacknu:
           "bg-primary-green text-black clip-path hover:opacity-90 hover:bg-primary-green/90",
         outlinedHacknu:
-          "border border-input clip-path rounded-none",
+          "cutted-cls rounded-none",
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",

@@ -7,17 +7,6 @@
   src: url("/fonts/hellovetica.ttf") format("truetype");
 }
 
-/* @font-face {
-  font-family: "NeueMachina";
-  src: url("/fonts/NeueMachina/NeueMachina-Black.ttf") format("truetype"),
-        url("/fonts/NeueMachina/NeueMachina-Bold.ttf") format("truetype"),
-        url("/fonts/NeueMachina/NeueMachina-Light.ttf") format("truetype"),
-        url("/fonts/NeueMachina/NeueMachina-Medium.ttf") format("truetype"),
-        url("/fonts/NeueMachina/NeueMachina-Regular.ttf") format("truetype"),
-        url("/fonts/NeueMachina/NeueMachina-Ultrabold.ttf") format("truetype"), 
-        url("/fonts/NeueMachina/NeueMachina-Ultralight.ttf") format("truetype");
-
-} */
 @font-face {
   font-family: "NeueMachina";
   src: url("/fonts/NeueMachina/NeueMachina-Black.ttf") format("truetype");
@@ -65,6 +54,10 @@
   src: url("/fonts/NeueMachina/NeueMachina-Ultrabold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
+}
+
+* {
+  scroll-behavior: smooth;
 }
 
 @layer base {
@@ -175,6 +168,60 @@
   z-index: -1;
 }
 
+.cutted-cls {
+  --all: 0px;
+  --b: white;
+  --bottom-left: 10px;
+  --top-right: 10px;
+
+  border: 2px solid var(--b);
+  background: linear-gradient(
+        45deg,
+        var(--b) 0 calc(var(--bottom-left, var(--all)) + 2px),
+        transparent 0
+      )
+      bottom left / 50% 50%,
+    linear-gradient(
+        -45deg,
+        var(--b) 0 calc(var(--bottom-right, var(--all)) + 2px),
+        transparent 0
+      )
+      bottom right/50% 50%,
+    linear-gradient(
+        135deg,
+        var(--b) 0 calc(var(--top-left, var(--all)) + 2px),
+        transparent 0
+      )
+      top left / 50% 50%,
+    linear-gradient(
+        -135deg,
+        var(--b) 0 calc(var(--top-right, var(--all)) + 2px),
+        transparent 0
+      )
+      top right / 50% 50%,
+    var(--img, transparent);
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  -webkit-mask: linear-gradient(
+        45deg,
+        transparent 0 var(--bottom-left, var(--all)),
+        #fff 0
+      )
+      bottom left,
+    linear-gradient(
+        -45deg,
+        transparent 0 var(--bottom-right, var(--all)),
+        #fff 0
+      )
+      bottom right,
+    linear-gradient(135deg, transparent 0 var(--top-left, var(--all)), #fff 0)
+      top left,
+    linear-gradient(-135deg, transparent 0 var(--top-right, var(--all)), #fff 0)
+      top right;
+  -webkit-mask-size: 50.5% 50.5%;
+  -webkit-mask-repeat: no-repeat;
+}
+
 a {
-  text-decoration: underline
+  text-decoration: underline;
 }

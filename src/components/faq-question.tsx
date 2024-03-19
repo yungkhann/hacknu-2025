@@ -1,15 +1,21 @@
-'use client'
+"use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
-export const FAQQuestion = ({ question, answer }: { question: string, answer: string}) => {
+export const FAQQuestion = ({
+  question,
+  answer,
+}: {
+  question: string;
+  answer: string;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [answerLength, setAnswerLength] = useState(0);
 
   useEffect(() => {
-    if(isOpen) {
+    if (isOpen) {
       const interval = setInterval(() => {
-        setAnswerLength(prevLength => {
+        setAnswerLength((prevLength) => {
           if (prevLength < answer.length) {
             return prevLength + 1;
           } else {
@@ -25,21 +31,27 @@ export const FAQQuestion = ({ question, answer }: { question: string, answer: st
   }, [isOpen, answer.length]);
 
   return (
-    <div className="flex p-5 items-start gap-4 self-stretch border-dashed	border-2 border-dashed-border">
+    <div
+      className="flex p-5 items-start gap-4 self-stretch border-dashed	border-2 border-dashed-border cursor-pointer"
+      onClick={() => setIsOpen((prevOpen) => !prevOpen)}
+    >
       <p className="flex-1">
         {question}
-        {isOpen && 
+        {isOpen && (
           <>
-            <br/> 
             <br />
-            <span dangerouslySetInnerHTML={{
-              __html: answer.substring(0, answerLength) + (answerLength < answer.length ? '_' : '')
-            }} />
-          </>}
+            <br />
+            <span
+              dangerouslySetInnerHTML={{
+                __html:
+                  answer.substring(0, answerLength) +
+                  (answerLength < answer.length ? "_" : ""),
+              }}
+            />
+          </>
+        )}
       </p>
-      <p onClick={() => setIsOpen(prevOpen => !prevOpen)}>
-        [{isOpen ? 'x' : '+'}]
-      </p>
+      <p>[{isOpen ? "x" : "+"}]</p>
     </div>
   );
-}
+};
