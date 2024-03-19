@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { Icons } from ".";
-import logo1 from "../../public/images/Logo1.svg";
-import logo2 from "../../public/images/Logo2.svg";
-import logo3 from "../../public/images/Logo3.svg";
-import logo4 from "../../public/images/Logo4.svg";
-import logo5 from "../../public/images/Logo5.svg";
-import logo6 from "../../public/images/Logo6.svg";
+import logo1 from "../../public/images/logo1.svg";
+import logo2 from "../../public/images/logo2.svg";
+import logo3 from "../../public/images/logo3.svg";
+import logo4 from "../../public/images/logo4.svg";
+import logo5 from "../../public/images/logo5.svg";
+import logo6 from "../../public/images/logo6.svg";
 
 const Images = [logo1, logo2, logo3, logo4, logo5, logo6];
 
