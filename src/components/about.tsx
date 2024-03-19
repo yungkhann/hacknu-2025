@@ -70,8 +70,12 @@ const About = () => {
             engineering and computer science are cutting-edge fields that differ
             from other sciences.
             <div className="flex mt-4">
-              <Icons.telegram />
-              <Icons.instagram />
+              <a href="https://t.me/nuacmsc">
+                <Icons.telegram />
+              </a>
+              <a href="https://www.instagram.com/nuacmsc/">
+                <Icons.instagram />
+              </a>
             </div>
           </span>
         </div>

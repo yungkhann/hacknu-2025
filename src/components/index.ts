@@ -8,6 +8,7 @@ import FAQ from "./faq";
 import KeyThings from "./key-things";
 import About from "./about";
 import { Register } from "./register";
+import Sponsors from "./sponsors";
 
 export {
   Header,
@@ -17,6 +18,7 @@ export {
   About,
   Timeline,
   Agenda,
+  Sponsors,
   Gallery,
   FAQ,
   Register,

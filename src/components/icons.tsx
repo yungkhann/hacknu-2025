@@ -290,6 +290,23 @@ const Icons = {
       />
     </svg>
   ),
+  seperatorSuperLong: (props: LucideProps) => (
+    <svg
+      width="2000"
+      height="3"
+      viewBox="0 0 2000 3"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M0 1.74951H2000"
+        stroke="#434343"
+        stroke-width="2"
+        stroke-dasharray="10 3"
+      />
+    </svg>
+  ),
 };
 
 export default Icons;
