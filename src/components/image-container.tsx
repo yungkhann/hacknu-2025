@@ -9,7 +9,7 @@ interface ImageContainerProps {
 const ImageContainer = ({ index, image, event }: ImageContainerProps) => {
   return (
     <div className="relative bg-[#252525]" style={{ paddingTop: '100%' }}>
-      <Image src={image} alt={`Image ${index + 1}`} fill style={{objectFit: "cover"}} sizes="(max-width: 768px) 100vw, 33vw"/>
+      <Image src={image} alt={`Image ${index + 1}`} fill style={{objectFit: "cover"}} sizes="(max-width: 768px) 100vw, 33vw" quality={100}/>
       <div className="w-full absolute bottom-0">
         <div className="relative h-[88px]">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#191919]"></div>
