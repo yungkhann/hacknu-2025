@@ -3,7 +3,7 @@ import { Icons } from ".";
 
 const Agenda = () => {
   return (
-    <div className="py-24 px-2 flex flex-col md:flex-row gap-x-6">
+    <div id="agenda" className="py-24 px-2 flex flex-col md:flex-row gap-x-6">
       <div className="py-4 w-full md:w-1/2">
         <p className="font-Helloviteca text-[56px] leading-[1.6] text-primary-green lg:text-[80px] pt-4">
           Agenda

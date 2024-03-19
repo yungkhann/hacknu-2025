@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import { Icons } from ".";
 import { Button } from "./ui/button";
@@ -41,13 +42,13 @@ const Header = () => {
         )}
       >
         {links.map((link) => (
-          <li key={link.name} className="">
-            <a
+          <li key={link.name}>
+            <Link
               href={link.href}
-              className="p-6 active:border-b-primary-green active:border-b-3"
+              className="p-6 active:border-b-primary-green active:border-b-3 no-underline hover:border-b-primary-green hover:border-b-3 hover:text-primary-green transition-colors"
             >
               {link.name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

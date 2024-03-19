@@ -1,7 +1,10 @@
+"use client";
 import { ITimelineData, TimelineData } from "@/consts/timeline";
 import { Button } from "./ui/button";
+import { useRouter } from "next/navigation";
 
 const Timeline = () => {
+  const router = useRouter();
   return (
     <div>
       {TimelineData.map((item: ITimelineData, index: number) => {
@@ -11,7 +14,11 @@ const Timeline = () => {
             className="p-6 cursor-pointer last:cursor-default border-t-[1px] last:border-b-[1px] border-[#282828] transition"
           >
             {item.map ? (
-              <div>
+              <div
+                onClick={() => {
+                  item.link && router.push(item.link);
+                }}
+              >
                 <div className="flex flex-col gap-y-10 md:flex-row justify-between">
                   <div className="flex flex-col gap-y-10">
                     <p className="font-Helloviteca text-2xl leading-none md:text-[40px] lg:text-[56px] pt-4">
@@ -19,7 +26,7 @@ const Timeline = () => {
                     </p>
                     <Button
                       variant={"outlinedHacknu"}
-                      className="relative bg-transparent outlinedHacknu"
+                      className="relative"
                       size={"xlg"}
                     >
                       Show on map
@@ -36,7 +43,12 @@ const Timeline = () => {
                 </div>
               </div>
             ) : (
-              <div className="flex flex-col gap-y-10 md:gap-y-0 md:items-center md:justify-between md:flex-row">
+              <div
+                className="flex flex-col gap-y-10 md:gap-y-0 md:items-center md:justify-between md:flex-row"
+                onClick={() => {
+                  item.link && router.push(item.link);
+                }}
+              >
                 <p className="font-Helloviteca text-2xl leading-none md:text-[40px] lg:text-[56px] pt-4">
                   {item.question}
                 </p>
