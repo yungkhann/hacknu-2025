@@ -285,8 +285,8 @@ const Icons = {
       <path
         d="M0 1.5H1124"
         stroke="#757575"
-        stroke-width="2"
-        stroke-dasharray="12 3"
+        strokeWidth="2"
+        strokeDasharray="12 3"
       />
     </svg>
   ),
