@@ -34,7 +34,9 @@ const Header = () => {
   return (
     <header className="flex items-center justify-between px-6 h-20 border-b-[1px] border-solid border-b-[rgba(40, 40, 40, 0.30)] bg-navbar-color">
       <div>
+      <Link href={'/'}>
         <Icons.hacknu />
+      </Link>
       </div>
       <ul
         className={cn(
