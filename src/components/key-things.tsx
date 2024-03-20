@@ -2,7 +2,7 @@ import { Icons } from ".";
 
 const KeyThings = () => {
   return (
-    <div className="w-full flex justify-center items-center py-6 lg:py-28">
+    <div id="about" className="w-full flex justify-center items-center py-6 lg:py-28">
       <span className="text-secondary-grey pr-3 md:text-base lg:text-2xl">
         #<br />#<br />#
       </span>

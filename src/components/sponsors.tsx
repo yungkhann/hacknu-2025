@@ -12,7 +12,7 @@ const Images = [logo3, logo4, logo5, logo6, logo7];
 
 const Sponsors = () => {
   return (
-    <div className="w-full py-12">
+    <div id="partners" className="w-full py-12">
       <div className="w-full relative">
         <div className="flex items-center w-full">
           <span className="text-secondary-grey pr-3 md:text-base lg:text-2xl">

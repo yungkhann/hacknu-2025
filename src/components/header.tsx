@@ -30,6 +30,7 @@ const IBMPlexMono = IBM_Plex_Mono({
 });
 
 const Header = () => {
+
   return (
     <header className="flex items-center justify-between px-6 h-20 border-b-[1px] border-solid border-b-[rgba(40, 40, 40, 0.30)] bg-navbar-color">
       <div>
@@ -52,17 +53,19 @@ const Header = () => {
           </li>
         ))}
       </ul>
-      <Button
-        variant={"hacknu"}
-        size={"xlg"}
-        className={cn("relative font-semibold", IBMPlexMono.className)}
-      >
-        <Icons.barCode className="absolute top-1 left-1" />
-        REGISTER
-        <span className="uppercase pb-0 text-white text-opacity-30 text-[10px] absolute bottom-[1px] mix-blend-difference right-1 font-normal">
-          0x800f081f
-        </span>
-      </Button>
+      <Link href="/register">
+        <Button
+          variant={"hacknu"}
+          size={"xlg"}
+          className={cn("relative font-semibold", IBMPlexMono.className)}
+        >
+          <Icons.barCode className="absolute top-1 left-1" />
+          REGISTER
+          <span className="uppercase pb-0 text-white text-opacity-30 text-[10px] absolute bottom-[1px] mix-blend-difference right-1 font-normal">
+            0x800f081f
+          </span>
+        </Button>
+      </Link>
     </header>
   );
 };
