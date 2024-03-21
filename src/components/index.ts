@@ -8,6 +8,7 @@ import FAQ from "./faq";
 import KeyThings from "./key-things";
 import About from "./about";
 import { Register } from "./register";
+import Credentials from "./credits";
 import Sponsors from "./sponsors";
 
 export {
@@ -22,4 +23,5 @@ export {
   Gallery,
   FAQ,
   Register,
+  Credentials
 };

@@ -307,6 +307,27 @@ const Icons = {
       />
     </svg>
   ),
+  heart: (props: LucideProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="17"
+      height="15"
+      viewBox="0 0 17 15"
+      fill="none"
+      {...props}
+    >
+      <rect x="3.25" width="3" height="9" fill="#E256FF" />
+      <rect x="1.75" y="1.5" width="6" height="7.5" fill="#E256FF" />
+      <rect x="9.25" y="1.5" width="6" height="7.5" fill="#E256FF" />
+      <rect x="10.75" width="3" height="9" fill="#E256FF" />
+      <rect x="0.25" y="3" width="16.5" height="3" fill="#E256FF" />
+      <rect x="0.25" y="3" width="16.5" height="4.5" fill="#E256FF" />
+      <rect x="4.75" y="7.5" width="7.5" height="4.5" fill="#E256FF" />
+      <rect x="3.25" y="9" width="10.5" height="1.5" fill="#E256FF" />
+      <rect x="6.25" y="9" width="4.5" height="4.5" fill="#E256FF" />
+      <rect x="7.75" y="10.5" width="1.5" height="4.5" fill="#E256FF" />
+    </svg>
+  ),
 };
 
 export default Icons;

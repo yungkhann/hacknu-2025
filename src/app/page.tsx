@@ -10,6 +10,7 @@ import {
   KeyThings,
   About,
   Sponsors,
+  Credentials,
 } from "@/components";
 import Image from "next/image";
 
@@ -25,6 +26,7 @@ export default function Home() {
       <Gallery />
       <FAQ />
       <Register />
+      <Credentials />
     </div>
   );
 }
