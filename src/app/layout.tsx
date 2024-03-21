@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Azeret_Mono } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components";
 import { cn } from "@/lib/utils";
 
 const azeretMono = Azeret_Mono({ subsets: ["latin"] });
@@ -21,12 +20,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "bg-main-background text-white overflow-x-hidden",
+          "bg-main-background text-white overflow-x-hidden h-screen",
           azeretMono.className
         )}
       >
-        <Header />
-        <main className="max-w-[1440px] mx-auto">{children}</main>
+        {children}
       </body>
     </html>
   );
