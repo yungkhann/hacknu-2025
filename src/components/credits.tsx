@@ -5,6 +5,7 @@ const authors = [
     name: "kadirzhan,",
     link: "https://t.me/kadirzhan",
   },
+  { name: "alekgreen,", link: "https://github.com/elamirKad" },
   { name: "abyl,", link: "https://github.com/Abyl10" },
   { name: "akbota,", link: "https://github.com/aqbotash" },
   { name: "rakhman,", link: "https://github.com/abd-rakhman" },
