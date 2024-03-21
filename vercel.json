@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/register",
-      "destination": "https://hack-nu-2024-registration.vercel.app/"
-    }
-  ]
-}
