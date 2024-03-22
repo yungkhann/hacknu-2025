@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { TeamInfo } from "@/app/t/[id]/page";
 import html2canvas from "html2canvas";
@@ -8,54 +8,61 @@ import { useCallback, useEffect, useState } from "react";
 
 export const Card = (teamInfo: TeamInfo) => {
   const formatTeamData = useCallback(() => {
-    const teamCode = `#${teamInfo?.team_code}`;
-    const teamName = `${teamInfo?.team_name}`;
-    const captain = `${teamInfo?.captain.name} ${teamInfo?.captain.surname} 👑`;
-    const members = teamInfo?.members.map(member => `${member.name} ${member.surname}`).join('\n');
+    const teamCode = `#${teamInfo?.team_code ?? "Unknown"}`;
+    const teamName = `${teamInfo?.team_name ?? "Unknown"}`;
+    const captain = `${teamInfo?.captain?.name ?? "Unknown"} ${
+      teamInfo?.captain?.surname ?? "Unknown"
+    } 👑`;
+    const members =
+      (teamInfo?.members &&
+        teamInfo?.members
+          .map((member) => `${member.name} ${member.surname}`)
+          .join("\n")) ??
+      "No members listed here.";
     return `${teamCode}\n${teamName}\n${captain}\n${members}`;
   }, [teamInfo]);
 
   const generatePdf = useCallback(async () => {
     const element = document.getElementById("card") as HTMLDivElement | null;
-    if(!element) return;
+    if (!element) return;
 
     const width = 297 * 3 - 360;
     const height = 210 * 3 - 300;
-    const body = document.createElement('div');
-    body.style.display = 'flex';
-    body.style.flexDirection = 'column';
-    body.style.alignItems = 'center';
-    body.style.justifyContent = 'center';
-    body.style.padding = '24px 40px'
+    const body = document.createElement("div");
+    body.style.display = "flex";
+    body.style.flexDirection = "column";
+    body.style.alignItems = "center";
+    body.style.justifyContent = "center";
+    body.style.padding = "24px 40px";
     body.style.width = `${width + 360}px`;
     body.style.height = `${height + 300}px`;
-    body.style.wordSpacing = '4px';
-    body.style.backgroundColor = '#191919';
+    body.style.wordSpacing = "4px";
+    body.style.backgroundColor = "#191919";
 
     const newElement = element.cloneNode(true) as HTMLDivElement;
 
     newElement.style.width = `${width}px`;
     newElement.style.height = `${height}px`;
 
-    if(newElement.firstChild?.firstChild?.lastChild)
-      newElement.firstChild?.firstChild?.lastChild.remove()
+    if (newElement.firstChild?.firstChild?.lastChild)
+      newElement.firstChild?.firstChild?.lastChild.remove();
     body.appendChild(newElement);
 
-    body.style.position = 'absolute';
-    body.style.left = '-9999px';
+    body.style.position = "absolute";
+    body.style.left = "-9999px";
     document.body.appendChild(body);
 
-    const canvas = await html2canvas(body , {
+    const canvas = await html2canvas(body, {
       backgroundColor: "#191919",
       scale: 2,
     });
     document.body.removeChild(body);
-    const data = canvas.toDataURL('image/png' );
+    const data = canvas.toDataURL("image/png");
 
     const pdf = new jsPDF({
-      orientation: 'landscape',
-      unit: 'px',
-      format: 'a4'
+      orientation: "landscape",
+      unit: "px",
+      format: "a4",
     });
     const imgProperties = pdf.getImageProperties(data);
     const pdfWidth = pdf.internal.pageSize.getWidth();
@@ -67,42 +74,53 @@ export const Card = (teamInfo: TeamInfo) => {
     let finalImgWidth, finalImgHeight;
 
     if (pdfWidth / pdfHeight > imgRatio) {
-        finalImgHeight = pdfHeight;
-        finalImgWidth = pdfHeight * imgRatio;
+      finalImgHeight = pdfHeight;
+      finalImgWidth = pdfHeight * imgRatio;
     } else {
-        finalImgWidth = pdfWidth;
-        finalImgHeight = pdfWidth / imgRatio;
+      finalImgWidth = pdfWidth;
+      finalImgHeight = pdfWidth / imgRatio;
     }
 
-    pdf.addImage(data, 'PNG', 0, 0, finalImgWidth, finalImgHeight);
+    pdf.addImage(data, "PNG", 0, 0, finalImgWidth, finalImgHeight);
 
     pdf.save(`#${teamInfo.team_code}.pdf`);
   }, [teamInfo]);
 
-
   return (
-    <div id='card' className={"relative flex md:w-[500px] p-[10px] items-start gap-4 border-dashed border-2 border-dashed-border"}>
+    <div
+      id="card"
+      className={
+        "relative flex md:w-[500px] p-[10px] items-start gap-4 border-dashed border-2 border-dashed-border"
+      }
+    >
       <div className="flex w-full h-full flex-1 p-6 md:p-8 flex-col justify-center items-start gap-12 border-dashed	border-2 border-dashed-border">
         <div className="flex items-center gap-10 self-stretch">
           <h1 className="flex flex-1 text-primary-green font-bold tracking-[-0.16px]">
             HackNU<span className="text-primary-purple">/24</span>
           </h1>
-          <Link href="/" className="no-underline"><p>[x]</p></Link>
+          <Link href="/" className="no-underline">
+            <p>[x]</p>
+          </Link>
         </div>
 
-        <p className="whitespace-pre-line">
-          {formatTeamData()}
-        </p>
+        <p className="whitespace-pre-line">{formatTeamData()}</p>
 
         <div className="flex justify-between items-end self-stretch">
           <div className="flex flex-1">
-            <p className="opacity-50 leading-[140%] font-light whitespace-pre-line">{'13-14 April\nNazarbayev University'}</p>
+            <p className="opacity-50 leading-[140%] font-light whitespace-pre-line">
+              {"13-14 April\nNazarbayev University"}
+            </p>
           </div>
           <button onClick={generatePdf} className="flex flex-row gap-2">
-            <p className="min-w-3 leading-[140%] text-primary-green font-bold whitespace-pre-line animate-blink">{'>'}</p><p className="flex flex-1 leading-[140%] text-primary-green font-bold whitespace-pre-line">{'Save'}</p>
+            <p className="min-w-3 leading-[140%] text-primary-green font-bold whitespace-pre-line animate-blink">
+              {">"}
+            </p>
+            <p className="flex flex-1 leading-[140%] text-primary-green font-bold whitespace-pre-line">
+              {"Save"}
+            </p>
           </button>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
