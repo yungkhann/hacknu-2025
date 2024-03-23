@@ -21,6 +21,10 @@ async function fetchTeamInfo(id: string | string[]): Promise<TeamInfo | null> {
   try {
     const response = await fetch(`${BACKEND_URL}teams/${id}`);
     const data = await response.json();
+    if(data.error) {
+      console.error('Error fetching team info', data.error);
+      return null;
+    }
     return data;
   } catch (error) {
     console.error('Error fetching team info', error);

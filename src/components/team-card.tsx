@@ -5,6 +5,10 @@ import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
+import { Azeret_Mono } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const azeretMono = Azeret_Mono({ subsets: ["latin"] });
 
 export const Card = (teamInfo: TeamInfo) => {
   const formatTeamData = useCallback(() => {
@@ -36,7 +40,6 @@ export const Card = (teamInfo: TeamInfo) => {
     body.style.padding = "24px 40px";
     body.style.width = `${width + 360}px`;
     body.style.height = `${height + 300}px`;
-    body.style.wordSpacing = "4px";
     body.style.backgroundColor = "#191919";
 
     const newElement = element.cloneNode(true) as HTMLDivElement;
@@ -85,37 +88,38 @@ export const Card = (teamInfo: TeamInfo) => {
 
     pdf.save(`#${teamInfo.team_code}.pdf`);
   }, [teamInfo]);
+  
 
   return (
     <div
       id="card"
       className={
-        "relative flex md:w-[500px] p-[10px] items-start gap-4 border-dashed border-2 border-dashed-border"
+        "relative flex md:w-[500px] p-[10px] items-start gap-4 border-dashed	border-2 border-dashed-border"
       }
     >
       <div className="flex w-full h-full flex-1 p-6 md:p-8 flex-col justify-center items-start gap-12 border-dashed	border-2 border-dashed-border">
         <div className="flex items-center gap-10 self-stretch">
-          <h1 className="flex flex-1 text-primary-green font-bold tracking-[-0.16px]">
-            HackNU<span className="text-primary-purple">/24</span>
+          <h1 className={cn("flex flex-1 text-primary-green font-bold tracking-[-0.16px]", azeretMono.className)}>
+            HackNU<span className={cn("text-primary-purple", azeretMono.className)}>/24</span>
           </h1>
           <Link href="/" className="no-underline">
             <p>[x]</p>
           </Link>
         </div>
 
-        <p className="whitespace-pre-line">{formatTeamData()}</p>
+        <p className={cn("whitespace-pre-line", azeretMono.className)}>{formatTeamData()}</p>
 
         <div className="flex justify-between items-end self-stretch">
           <div className="flex flex-1">
-            <p className="opacity-50 leading-[140%] font-light whitespace-pre-line">
+            <p className={cn("opacity-50 leading-[140%] font-light whitespace-pre-line", azeretMono.className)}>
               {"13-14 April\nNazarbayev University"}
             </p>
           </div>
           <button onClick={generatePdf} className="flex flex-row gap-2">
-            <p className="min-w-3 leading-[140%] text-primary-green font-bold whitespace-pre-line animate-blink">
+            <p className={cn("min-w-3 leading-[140%] text-primary-green font-bold whitespace-pre-line animate-blink", azeretMono.className)}>
               {">"}
             </p>
-            <p className="flex flex-1 leading-[140%] text-primary-green font-bold whitespace-pre-line">
+            <p className={cn("flex flex-1 leading-[140%] text-primary-green font-bold whitespace-pre-line", azeretMono.className)}>
               {"Save"}
             </p>
           </button>
