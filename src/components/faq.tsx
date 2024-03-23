@@ -176,7 +176,7 @@ const texts = [
       },
       {
         question: "I didn’t find my question here!",
-        answer: `Join our Telegram group to get answer to any questions.`
+        answer: `Join our <a href="https://t.me/hacknu_chat" target="_blank">Telegram group</a> to get answer to any questions.`
       }
     ]
   }

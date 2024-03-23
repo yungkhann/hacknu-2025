@@ -16,8 +16,9 @@ const Credentials = () => {
   return (
     <div className="w-full py-6 flex justify-center">
         <div className=" font-Helloviteca text-[#6A6A6A] text-xs lg:text-sm flex gap-2 flex-wrap justify-center ">
-        created by
+        created with
         <Icons.heart />
+        by
         {authors.map((author) => {
             return (
             <a
