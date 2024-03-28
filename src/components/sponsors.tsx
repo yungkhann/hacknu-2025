@@ -7,8 +7,9 @@ import logo4 from "../../public/images/logo4.svg";
 import logo5 from "../../public/images/logo5.svg";
 import logo6 from "../../public/images/logo6.svg";
 import logo7 from "../../public/images/logo7.svg";
+import logo8 from "../../public/images/logo8.png";
 
-const Images = [logo3, logo4, logo5, logo6, logo7];
+const Images = [logo4, logo5, logo6, logo8, logo3, logo7];
 
 const Sponsors = () => {
   return (
@@ -26,7 +27,7 @@ const Sponsors = () => {
             Our lovely sponsors
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-8">
+        {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-8">
           <Image src={logo3} width={1094} height={1094} alt="invalid image" />
           <Image src={logo4} width={1094} height={1094} alt="invalid image" />
           <Image src={logo5} width={1094} height={1094} alt="invalid image" />
@@ -36,8 +37,8 @@ const Sponsors = () => {
             <Image src={logo6} width={1094} height={1094} alt="invalid image" />
             <Image src={logo7} width={1094} height={1094} alt="invalid image" />
           </div>
-        </div>
-        {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-8 ">
+        </div> */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-8 ">
           {Images.map((image) => {
             return (
               <div key={image}>
@@ -50,7 +51,7 @@ const Sponsors = () => {
               </div>
             );
           })}
-        </div> */}
+        </div>
       </div>
     </div>
   );
