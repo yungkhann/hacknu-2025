@@ -10,6 +10,7 @@ import About from "./about";
 import { Register } from "./register";
 import Credentials from "./credits";
 import Sponsors from "./sponsors";
+import InfoPartners from "./info-partners";
 
 export {
   Header,
@@ -23,5 +24,6 @@ export {
   Gallery,
   FAQ,
   Register,
-  Credentials
+  Credentials,
+  InfoPartners,
 };
