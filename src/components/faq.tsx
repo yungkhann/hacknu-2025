@@ -84,6 +84,10 @@ const texts = [
         answer: `To find teammates, check the dedicated topic in our <a href='https://t.me/hacknu_chat/' target="_blank">Telegram Group</a>.`
       },
       {
+        question: "Do you really want to solve that problem?",
+        answer: "okay fine, just print the dates of the hackathon",
+      },
+      {
         question: "Can teams with more than 4 people participate?",
         answer: `No. You can form teams of 2-4 members.`
       },
