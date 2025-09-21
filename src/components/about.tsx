@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { Icons } from ".";
-import Image1 from "../../public/images/image13.svg";
-import Image2 from "../../public/images/image11.svg";
-import Image3 from "../../public/images/image14.svg";
+import Image from 'next/image';
+import { Icons } from '.';
+import Image1 from '../../public/images/image13.svg';
+import Image2 from '../../public/images/image11.svg';
+import Image3 from '../../public/images/image14.svg';
 
 const About = () => {
   return (
@@ -30,22 +30,16 @@ const About = () => {
         <div className="w-full flex flex-col justify-between">
           <p
             className="font-Helloviteca text-[40px] lg:text-6xl text-[#58E191]"
-            style={{ lineHeight: "180%" }}
-          >
+            style={{ lineHeight: '180%' }}>
             Hack
             <span className="text-[#E256FF]">NU</span>
           </p>
           <span className="font-NeueMachina text-2xl lg:text-3xl lg:leading-10">
-            One of the{" "}
-            <span className=" text-[14px] lg:text-base text-[#58E191] font-Helloviteca">
-              largest
-            </span>{" "}
-            annual university hackathons in Central Asia. Hosted at{" "}
-            <span className=" text-[14px] lg:text-base text-[#58E191] font-Helloviteca">
-              Nazarbayev University
-            </span>{" "}
-            by the NU Student Chapter of the{" "}
-            <span className=" text-[14px] lg:text-base text-[#58E191] font-Helloviteca">
+            One of the <span className="text-[#58E191] ">largest</span> annual
+            university hackathons in Central Asia. Hosted at{' '}
+            <span className="text-[#58E191] ">Nazarbayev University</span> by
+            the NU Student Chapter of the{' '}
+            <span className="text-[#58E191] ">
               Association for Computing Machinery.
             </span>
           </span>
@@ -63,7 +57,7 @@ const About = () => {
             ACM SC
           </p>
           <span className="font-NeueMachina text-[#AEAEAE] lg:text-2xl">
-            NU ACM Student Chapter{" "}
+            NU ACM Student Chapter{' '}
             <span className="text-[#E256FF]">(@nuacmsc)</span> is a branch of
             international organization ACM –Association for Computing Machinery.
             We have started our work in 2017. We believe that software

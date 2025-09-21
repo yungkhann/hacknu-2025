@@ -10,8 +10,8 @@ import {
   Sponsors,
   Credentials,
   InfoPartners,
-} from "@/components";
-import Layout from "@/components/layout";
+} from '@/components';
+import Layout from '@/components/layout';
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
         <About />
         <Agenda />
         <Sponsors />
-        <InfoPartners />
+
         <Gallery />
         <FAQ />
         <Register />

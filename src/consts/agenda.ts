@@ -10,7 +10,7 @@ export interface IAgendaData {
   export const AgendaData: IAgendaData[] = [
     {
       weekday: "Saturday",
-      date: "13 April",
+      date: "18 October",
       events: [
         { time: "09:00", name: "Check-in" },
         { time: "10:00", name: "Opening Ceremony" },
@@ -22,7 +22,7 @@ export interface IAgendaData {
     },
     {
       weekday: "Sunday",
-      date: "14 April",
+      date: "19 October",
       events: [
         { time: "11:30", name: "Submissions Deadline" },
         { time: "12:00", name: "Coffee-break" },

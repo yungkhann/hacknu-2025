@@ -9,7 +9,7 @@ const Agenda = () => {
           Agenda
         </p>
         <p className="font-NeueMachina text-xl font-normal text-primary-grey">
-          13-14 April
+          18-19 October
         </p>
       </div>
       <div className="w-full md:w-1/2">

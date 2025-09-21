@@ -112,7 +112,7 @@ export const Card = (teamInfo: TeamInfo) => {
         <div className="flex justify-between items-end self-stretch">
           <div className="flex flex-1">
             <p className={cn("opacity-50 leading-[140%] font-light whitespace-pre-line", azeretMono.className)}>
-              {"13-14 April\nNazarbayev University"}
+              {"18-19 October\nNazarbayev University"}
             </p>
           </div>
           <button onClick={generatePdf} className="flex flex-row gap-2">
