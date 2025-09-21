@@ -9,7 +9,7 @@ const authors = [
   { name: 'abyl,', link: 'https://github.com/Abyl10' },
   { name: 'akbota,', link: 'https://github.com/aqbotash' },
   { name: 'rakhman,', link: 'https://github.com/abd-rakhman' },
-  { name: 'sanxzhar', link: 'https://sanxzhar.com' },
+  { name: 'sanxzhar,', link: 'https://sanxzhar.com' },
   { name: 'yungkhann', link: 'https://github.com/yungkhann' },
 ];
 
