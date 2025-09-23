@@ -51,11 +51,11 @@ const Sponsors = () => {
             <Image src={logo7} width={1094} height={1094} alt="invalid image" />
           </div>
         </div> */}
-        <div className="flex flex-col items-center gap-8 md:gap-12 mt-8 px-4">
+        <div className="flex flex-col items-center gap-12 md:gap-12 mt-8 px-4">
           {sponsors.map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className={`flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8 ${
+              className={`flex flex-col md:flex-row justify-center items-center gap-8 md:gap-8 ${
                 row.length === 1
                   ? ''
                   : row.length === 2
