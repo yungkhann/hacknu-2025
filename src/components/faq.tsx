@@ -79,7 +79,7 @@ const texts = [
     questions: [
       {
         question: 'How do I participate in a hackathon?',
-        answer: `To register, fill out the online form before the application deadline of <strong>Apr 7th, 23:59</strong>. Applications are approved on a rolling basis, so registering early increases your chances of attending. Once the registration period ends, you will have a limited time to confirm your attendance at the event. Otherwise, your spot will be allocated to another team.`,
+        answer: `To register, fill out the online form before the application deadline of <strong>Oct 9th, 23:59</strong>. Applications are approved on a rolling basis, so registering early increases your chances of attending. Once the registration period ends, you will have a limited time to confirm your attendance at the event. Otherwise, your spot will be allocated to another team.`,
       },
       {
         question: 'Can I attend?',
@@ -93,7 +93,7 @@ Please also note that participants must be under 25 years old at the time of app
       },
       {
         question: 'What is the deadline for team registration?',
-        answer: `Apr 7th, 23:59`,
+        answer: `Oct 9th, 23:59`,
       },
       {
         question: 'What if I don’t have a team?',
