@@ -7,16 +7,24 @@ import logo4 from '../../public/images/logo4.svg';
 import logo5 from '../../public/images/logo5.svg';
 import logo6 from '../../public/images/logo6.png';
 import logo7 from '../../public/images/logo7.png';
-import logo8 from '../../public/images/logo8.png';
+import logo9 from '../../public/images/logo9.svg';
 
 const Images = [logo3, logo4, logo5, logo6, logo7];
 
 const sponsors = [
-  { src: logo3, alt: 'logo3', fullWidth: true },
-  { src: logo4, alt: 'logo4' },
-  { src: logo5, alt: 'logo5' },
-  { src: logo6, alt: 'logo6' },
-  { src: logo7, alt: 'logo7' },
+  // Row 1: logo3 (single item)
+  [{ src: logo3, alt: 'logo3' }],
+  // Row 2: logo7 and logo9 (two items)
+  [
+    { src: logo7, alt: 'logo7' },
+    { src: logo9, alt: 'logo9' },
+  ],
+  // Row 3: logo4, logo5, logo6 (three items)
+  [
+    { src: logo4, alt: 'logo4' },
+    { src: logo5, alt: 'logo5' },
+    { src: logo6, alt: 'logo6' },
+  ],
 ];
 
 const Sponsors = () => {
@@ -46,29 +54,39 @@ const Sponsors = () => {
             <Image src={logo7} width={1094} height={1094} alt="invalid image" />
           </div>
         </div> */}
-        <div className="w-full  flex justify-center mt-8">
-          <Image
-            src={sponsors[0].src}
-            alt={sponsors[0].alt}
-            width={750}
-            height={750}
-            className="object-contain"
-          />
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8">
-          {sponsors.slice(1).map(({ src, alt }, index) => (
+        <div className="flex flex-col items-center gap-12 mt-8">
+          {sponsors.map((row, rowIndex) => (
             <div
-              key={index}
-              className="flex items-center justify-center w-full" // centers inside the grid cell
-            >
-              <Image
-                src={src}
-                alt={alt}
-                width={450}
-                height={450}
-                className="object-contain"
-              />
+              key={rowIndex}
+              className={`flex justify-center gap-8 ${
+                row.length === 1 ? '' : row.length === 2 ? 'gap-16' : 'gap-10'
+              }`}>
+              {row.map(({ src, alt }, itemIndex) => (
+                <Image
+                  key={itemIndex}
+                  src={src}
+                  alt={alt}
+                  width={
+                    alt === 'logo9'
+                      ? 300
+                      : row.length === 1
+                      ? 600
+                      : row.length === 2
+                      ? 450
+                      : 350
+                  }
+                  height={
+                    alt === 'logo9'
+                      ? 300
+                      : row.length === 1
+                      ? 600
+                      : row.length === 2
+                      ? 450
+                      : 350
+                  }
+                  className="object-contain"
+                />
+              ))}
             </div>
           ))}
         </div>
