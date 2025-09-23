@@ -69,6 +69,8 @@ const Sponsors = () => {
                   width={
                     alt === 'logo9'
                       ? 300
+                      : alt === 'logo5'
+                      ? 250
                       : row.length === 1
                       ? 600
                       : row.length === 2
@@ -78,6 +80,8 @@ const Sponsors = () => {
                   height={
                     alt === 'logo9'
                       ? 300
+                      : alt === 'logo5'
+                      ? 250
                       : row.length === 1
                       ? 600
                       : row.length === 2
