@@ -1,29 +1,26 @@
 import Image from 'next/image';
 import { Icons } from '.';
-import logo1 from '../../public/images/logo1.svg';
-import logo2 from '../../public/images/logo2.svg';
-import logo3 from '../../public/images/logo3.png';
-import logo4 from '../../public/images/logo4.svg';
-import logo5 from '../../public/images/logo5.svg';
-import logo6 from '../../public/images/logo6.png';
-import logo7 from '../../public/images/logo7.png';
-import logo9 from '../../public/images/logo9.svg';
 
-const Images = [logo3, logo4, logo5, logo6, logo7];
+import umag from '../../public/images/umag.svg';
+import higgsfield from '../../public/images/higgsfield.svg';
+import zaman from '../../public/images/zaman.svg';
+import zapis from '../../public/images/zapis.svg';
+import dataart from '../../public/images/dataart.svg';
+import mycar from '../../public/images/mycar.svg';
 
 const sponsors = [
-  // Row 1: logo3 (single item)
-  [{ src: logo3, alt: 'logo3' }],
-  // Row 2: logo7 and logo9 (two items)
+  // Row 1: zaman (single item)
+  [{ src: zaman, alt: 'zaman' }],
+  // Row 2: higgsfield and mycar (two items)
   [
-    { src: logo7, alt: 'logo7' },
-    { src: logo9, alt: 'logo9' },
+    { src: higgsfield, alt: 'higgsfield' },
+    { src: mycar, alt: 'mycar' },
   ],
-  // Row 3: logo4, logo5, logo6 (three items)
+  // Row 3: zapis, umag, dataart (three items)
   [
-    { src: logo4, alt: 'logo4' },
-    { src: logo5, alt: 'logo5' },
-    { src: logo6, alt: 'logo6' },
+    { src: zapis, alt: 'zapis' },
+    { src: umag, alt: 'umag' },
+    { src: dataart, alt: 'dataart' },
   ],
 ];
 
@@ -54,41 +51,37 @@ const Sponsors = () => {
             <Image src={logo7} width={1094} height={1094} alt="invalid image" />
           </div>
         </div> */}
-        <div className="flex flex-col items-center gap-12 mt-8">
+        <div className="flex flex-col items-center gap-8 md:gap-12 mt-8 px-4">
           {sponsors.map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className={`flex justify-center gap-8 ${
-                row.length === 1 ? '' : row.length === 2 ? 'gap-16' : 'gap-10'
+              className={`flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8 ${
+                row.length === 1
+                  ? ''
+                  : row.length === 2
+                  ? 'md:gap-16'
+                  : 'md:gap-10'
               }`}>
               {row.map(({ src, alt }, itemIndex) => (
                 <Image
                   key={itemIndex}
                   src={src}
                   alt={alt}
-                  width={
-                    alt === 'logo9'
-                      ? 300
-                      : alt === 'logo5'
-                      ? 250
-                      : row.length === 1
-                      ? 600
-                      : row.length === 2
-                      ? 450
-                      : 350
-                  }
-                  height={
-                    alt === 'logo9'
-                      ? 300
-                      : alt === 'logo5'
-                      ? 250
-                      : row.length === 1
-                      ? 600
-                      : row.length === 2
-                      ? 450
-                      : 350
-                  }
-                  className="object-contain"
+                  width={alt === 'zaman' ? 800 : 350}
+                  height={alt === 'zaman' ? 800 : 350}
+                  className={`object-contain w-auto ${
+                    alt === 'zaman'
+                      ? 'h-32 md:h-60'
+                      : alt === 'zapis'
+                      ? 'h-20 md:h-24'
+                      : alt === 'higgsfield' || alt === 'mycar'
+                      ? 'h-16 md:h-20'
+                      : alt === 'umag'
+                      ? 'h-16 md:h-20'
+                      : alt === 'dataart'
+                      ? 'h-10 md:h-12'
+                      : 'h-20 md:h-24'
+                  }`}
                 />
               ))}
             </div>
