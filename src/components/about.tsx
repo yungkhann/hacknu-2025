@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { Icons } from '.';
-import Image1 from '../../public/images/image13.svg';
-import Image2 from '../../public/images/image11.svg';
-import Image3 from '../../public/images/image14.svg';
+import Image1 from '../../public/images/image13.jpeg';
+import Image2 from '../../public/images/image11.jpeg';
+import Image3 from '../../public/images/image14.jpeg';
 
 const About = () => {
   return (
