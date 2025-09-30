@@ -14,12 +14,13 @@ const Hero = () => {
         </p>
       </div>
       <div className="flex justify-center">
-        <Link
+        <a
           href="https://forms.gle/Gu8fxftBDf64MYX49"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex flex-row"
-          style={{
-            textDecoration: 'none',
-          }}>
+          style={{ textDecoration: 'none' }}
+        >
           <div className="flex flex-row items-center gap-x-1">
             <Icons.smallArrowRight />
             <span className="font-Helloviteca text-[30px] lg:text-[42px] leading-normal text-primary-green">
@@ -27,7 +28,8 @@ const Hero = () => {
             </span>
           </div>
           <div className="self-end mb-1 bg-primary-green w-[36px] h-[5.25px] animate-blink" />
-        </Link>
+        </a>
+
       </div>
     </div>
   );
