@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://hacknu.kz
+
+# Sitemaps
+Sitemap: https://hacknu.kz/sitemap.xml
