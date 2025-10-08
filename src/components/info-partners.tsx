@@ -1,9 +1,6 @@
 import Image from "next/image";
 import { Icons } from ".";
-import Logo1 from "../../public/images/infoLogo1.svg"
-import Logo2 from "../../public/images/infoLogo2.svg"
-
-const Images = [Logo1, Logo2];
+import Logo1 from "../../public/images/infoLogo1.svg";
 
 const InfoPartners = () => {
   return (
@@ -27,10 +24,7 @@ const InfoPartners = () => {
           <Image src={logo5} width={1094} height={1094} alt="invalid image" />
         </div> */}
         <div className="w-full flex justify-center">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8 lg:w-[65%]">
-            <Image src={Logo1} width={1094} height={1094} alt="invalid image" />
-            <Image src={Logo2} width={1094} height={1094} alt="invalid image" />
-          </div>
+          <Image src={Logo1} width={1094} height={1094} alt="invalid image" />
         </div>
         {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-8 ">
           {Images.map((image) => {
