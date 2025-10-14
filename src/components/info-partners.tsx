@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Icons } from ".";
 import Logo1 from "../../public/images/infoLogo1.svg";
+import NuImpact from "../../public/images/nuimpact.png";
 
 const InfoPartners = () => {
   return (
@@ -15,7 +16,7 @@ const InfoPartners = () => {
         </div>
         <div className="absolute z-50 top-0 w-full flex justify-center">
           <div className="bg-[#191919] px-3 text-base lg:text-2xl">
-            Our info-partners
+            Other Partners
           </div>
         </div>
         {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-8">
@@ -23,8 +24,14 @@ const InfoPartners = () => {
           <Image src={logo4} width={1094} height={1094} alt="invalid image" />
           <Image src={logo5} width={1094} height={1094} alt="invalid image" />
         </div> */}
-        <div className="w-full flex justify-center">
-          <Image src={Logo1} width={1094} height={1094} alt="invalid image" />
+        <div className="w-full flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-12">
+          <Image
+            src={Logo1}
+            width={500}
+            height={500}
+            alt="info partner logo 1"
+          />
+          <Image src={NuImpact} width={500} height={500} alt="NuImpact logo" />
         </div>
         {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-8 ">
           {Images.map((image) => {
